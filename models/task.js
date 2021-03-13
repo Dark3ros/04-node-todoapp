@@ -3,19 +3,18 @@ const { v4: uuidv4 } = require('uuid');
 class Task {
 
     id = '';
-    tittle = '';
-    done = false;
-    create = null;
-    finish = null;
+    title = '';
+    done = null;
+    created = null;
+    finished = null;
 
-    constructor(tittle){
-
-        this.id = uuidv4();
-        this.tittle = tittle;
+    constructor(title) {
+        this.id = uuidv4(); //TODO: asignar id
+        this.title = title;
         this.done = false;
-        this.create= new Date();
-
+        this.created = new Date();
     }
+
 }
 
 module.exports = Task;
